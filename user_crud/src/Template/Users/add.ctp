@@ -7,11 +7,13 @@
 <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      User
-      <small><?php echo __('Add'); ?></small>
+      Usuario
+      <small><?php echo __('Nuevo'); ?></small>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="<?php echo $this->Url->build(['action' => 'index']); ?>"><i class="fa fa-dashboard"></i> <?php echo __('Home'); ?></a></li>
+      <li>
+          <?= $this->Html->link('<i class="fa fa-arrow-left"></i> '.__('Volver'),['action' => 'index'], ['escape' => false]) ?>
+      </li>
     </ol>
   </section>
 
@@ -21,10 +23,6 @@
       <div class="col-md-12">
         <!-- general form elements -->
         <div class="box box-primary">
-          <div class="box-header with-border">
-            <h3 class="box-title"><?php echo __('Form'); ?></h3>
-          </div>
-          <!-- /.box-header -->
           <!-- form start -->
           <?php echo $this->Form->create($user, ['role' => 'form']); ?>
             <div class="box-body">
